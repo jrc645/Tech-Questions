@@ -97,7 +97,6 @@ input[type=checkbox]{
 }
 
 input[type=text],
-input[type=email],
 textarea{
   width:100%;
   border:1px solid var(--border);
@@ -217,7 +216,7 @@ button:hover{
 
   <main>
 
-    <!-- Contact Information -->
+    <!-- Optional Name -->
     <section class="question">
 
       <label class="title" for="name">
@@ -228,20 +227,7 @@ button:hover{
         type="text"
         id="name"
         name="Name"
-        placeholder="Your name"
-        required
-      >
-
-      <label class="title" for="email" style="margin-top:18px">
-        Your Email Address
-      </label>
-
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="you@example.com"
-        required
+        placeholder="Your name (optional)"
       >
 
     </section>
