@@ -15,7 +15,9 @@
   --text:#24313d
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box
+}
 
 body{
   margin:0;
@@ -154,7 +156,8 @@ button:hover{
 }
 
 @media(max-width:600px){
-  header,main{
+  header,
+  main{
     padding:24px 20px
   }
 
@@ -210,9 +213,30 @@ button:hover{
 >
 
   <!-- FormSubmit settings -->
-  <input type="hidden" name="_subject" value="New Tech Help Pre-Meeting Questionnaire">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha" value="true">
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Tech Help Pre-Meeting Questionnaire"
+  >
+
+  <input
+    type="hidden"
+    name="_template"
+    value="table"
+  >
+
+  <input
+    type="hidden"
+    name="_captcha"
+    value="true"
+  >
+
+  <!-- Return to this page after successful submission -->
+  <input
+    type="hidden"
+    name="_next"
+    value="https://jrc645.github.io/Tech-Questions/"
+  >
 
   <main>
 
@@ -234,6 +258,7 @@ button:hover{
 
 
     <section class="question">
+
       <span class="title">
         1. What would you like help with?
         <span style="font-weight:400">
@@ -244,42 +269,74 @@ button:hover{
       <div class="checks">
 
         <label class="check">
-          <input type="checkbox" name="Help Needed" value="iPhone / iPad">
+          <input
+            type="checkbox"
+            name="Help Needed"
+            value="iPhone / iPad"
+          >
           iPhone / iPad
         </label>
 
         <label class="check">
-          <input type="checkbox" name="Help Needed" value="Android phone / tablet">
+          <input
+            type="checkbox"
+            name="Help Needed"
+            value="Android phone / tablet"
+          >
           Android phone / tablet
         </label>
 
         <label class="check">
-          <input type="checkbox" name="Help Needed" value="Computer / laptop">
+          <input
+            type="checkbox"
+            name="Help Needed"
+            value="Computer / laptop"
+          >
           Computer / laptop
         </label>
 
         <label class="check">
-          <input type="checkbox" name="Help Needed" value="TV / streaming">
+          <input
+            type="checkbox"
+            name="Help Needed"
+            value="TV / streaming"
+          >
           TV / streaming
         </label>
 
         <label class="check">
-          <input type="checkbox" name="Help Needed" value="Email">
+          <input
+            type="checkbox"
+            name="Help Needed"
+            value="Email"
+          >
           Email
         </label>
 
         <label class="check">
-          <input type="checkbox" name="Help Needed" value="Photos">
+          <input
+            type="checkbox"
+            name="Help Needed"
+            value="Photos"
+          >
           Photos
         </label>
 
         <label class="check">
-          <input type="checkbox" name="Help Needed" value="Internet / Wi-Fi">
+          <input
+            type="checkbox"
+            name="Help Needed"
+            value="Internet / Wi-Fi"
+          >
           Internet / Wi-Fi
         </label>
 
         <label class="check">
-          <input type="checkbox" name="Help Needed" value="Other">
+          <input
+            type="checkbox"
+            name="Help Needed"
+            value="Other"
+          >
           Other
         </label>
 
@@ -290,10 +347,12 @@ button:hover{
         name="Other Help Needed"
         placeholder="If Other, please describe"
       >
+
     </section>
 
 
     <section class="question">
+
       <label class="title">
         2. What are you trying to do, or what isn't working?
       </label>
@@ -302,6 +361,7 @@ button:hover{
         name="What They Are Trying To Do"
         placeholder="Please describe the problem or what you are trying to accomplish."
       ></textarea>
+
     </section>
 
 
@@ -314,12 +374,20 @@ button:hover{
       <div class="checks">
 
         <label class="check">
-          <input type="checkbox" name="Problem Duration" value="New">
+          <input
+            type="checkbox"
+            name="Problem Duration"
+            value="New"
+          >
           New
         </label>
 
         <label class="check">
-          <input type="checkbox" name="Problem Duration" value="Been there for some time">
+          <input
+            type="checkbox"
+            name="Problem Duration"
+            value="Been there for some time"
+          >
           Been there for some time
         </label>
 
@@ -346,17 +414,29 @@ button:hover{
       <div class="checks">
 
         <label class="check">
-          <input type="checkbox" name="Connection" value="Internet">
+          <input
+            type="checkbox"
+            name="Connection"
+            value="Internet"
+          >
           Internet
         </label>
 
         <label class="check">
-          <input type="checkbox" name="Connection" value="Cellular">
+          <input
+            type="checkbox"
+            name="Connection"
+            value="Cellular"
+          >
           Cellular
         </label>
 
         <label class="check">
-          <input type="checkbox" name="Connection" value="Both">
+          <input
+            type="checkbox"
+            name="Connection"
+            value="Both"
+          >
           Both
         </label>
 
@@ -368,13 +448,18 @@ button:hover{
     <section class="question">
 
       <div class="notice">
+
         <strong>
           5. Please have your passwords to your device(s) available.
         </strong>
+
         <br>
+
         This may include your Apple ID, Google account, or Microsoft account.
+
         <strong>I do not want to know your password</strong>,
         but you may need to log in during our meeting.
+
       </div>
 
     </section>
@@ -383,10 +468,13 @@ button:hover{
     <section class="question">
 
       <div class="notice">
+
         <strong>Note:</strong>
+
         If you're not sure of the answers to these questions, no worries.
         We can review that when we meet. But it could be helpful to have
         as much information upfront as possible.
+
       </div>
 
     </section>
@@ -394,7 +482,10 @@ button:hover{
 
     <div class="actions">
 
-      <button type="button" onclick="window.print()">
+      <button
+        type="button"
+        onclick="window.print()"
+      >
         Print / Save as PDF
       </button>
 
