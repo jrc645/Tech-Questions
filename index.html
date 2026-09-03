@@ -1,102 +1,409 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pre-Meeting Questions | Tech Help</title>
+
 <style>
-:root{--navy:#17324d;--blue:#2f6f9f;--light:#eef6fb;--border:#cbd5df;--text:#24313d}
+:root{
+  --navy:#17324d;
+  --blue:#2f6f9f;
+  --light:#eef6fb;
+  --border:#cbd5df;
+  --text:#24313d
+}
+
 *{box-sizing:border-box}
-body{margin:0;background:#f4f7f9;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.55}
-.container{max-width:760px;margin:auto;padding:28px 18px 50px}
-.card{background:#fff;border-radius:12px;box-shadow:0 3px 18px #17324d1a;overflow:hidden}
-header{background:var(--navy);color:#fff;padding:30px 32px}
-h1{margin:0;font-size:30px} header p{margin:7px 0 0;opacity:.9}
-main{padding:30px 32px}.question{margin-bottom:30px}
-.title{display:block;font-size:18px;font-weight:650;color:var(--navy);margin-bottom:13px}
-.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}
-.check{display:flex;align-items:center;gap:10px;padding:9px 10px;border:1px solid var(--border);border-radius:7px;cursor:pointer}
-.check:hover{background:var(--light)}
-input[type=checkbox]{width:18px;height:18px;accent-color:var(--blue)}
-input[type=text],textarea{width:100%;border:1px solid var(--border);border-radius:7px;padding:12px;font:inherit;margin-top:10px}
-textarea{min-height:105px;resize:vertical}
-.hint{color:#5d6b78;font-size:14px;margin:15px 0 0}
-.notice{background:var(--light);border-left:4px solid var(--blue);padding:17px 18px;border-radius:5px}
-button{background:var(--blue);color:#fff;border:0;border-radius:7px;padding:12px 22px;font-size:16px;font-weight:600;cursor:pointer}
-.actions{text-align:right}.footer{text-align:center;color:#5d6b78;font-size:13px;margin-top:18px}
-@media(max-width:600px){header,main{padding:24px 20px}.checks{grid-template-columns:1fr}h1{font-size:26px}}
-@media print{body{background:#fff}.card{box-shadow:none}button,.footer{display:none}}
+
+body{
+  margin:0;
+  background:#f4f7f9;
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  line-height:1.55
+}
+
+.container{
+  max-width:760px;
+  margin:auto;
+  padding:28px 18px 50px
+}
+
+.card{
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 3px 18px #17324d1a;
+  overflow:hidden
+}
+
+header{
+  background:var(--navy);
+  color:#fff;
+  padding:30px 32px
+}
+
+h1{
+  margin:0;
+  font-size:30px
+}
+
+header p{
+  margin:7px 0 0;
+  opacity:.9
+}
+
+main{
+  padding:30px 32px
+}
+
+.question{
+  margin-bottom:30px
+}
+
+.title{
+  display:block;
+  font-size:18px;
+  font-weight:650;
+  color:var(--navy);
+  margin-bottom:13px
+}
+
+.checks{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px 18px
+}
+
+.check{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:9px 10px;
+  border:1px solid var(--border);
+  border-radius:7px;
+  cursor:pointer
+}
+
+.check:hover{
+  background:var(--light)
+}
+
+input[type=checkbox]{
+  width:18px;
+  height:18px;
+  accent-color:var(--blue)
+}
+
+input[type=text],
+textarea{
+  width:100%;
+  border:1px solid var(--border);
+  border-radius:7px;
+  padding:12px;
+  font:inherit;
+  margin-top:10px
+}
+
+textarea{
+  min-height:105px;
+  resize:vertical
+}
+
+.hint{
+  color:#5d6b78;
+  font-size:14px;
+  margin:15px 0 0
+}
+
+.notice{
+  background:var(--light);
+  border-left:4px solid var(--blue);
+  padding:17px 18px;
+  border-radius:5px
+}
+
+button{
+  background:var(--blue);
+  color:#fff;
+  border:0;
+  border-radius:7px;
+  padding:12px 22px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer
+}
+
+button:hover{
+  opacity:.9
+}
+
+.actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+  flex-wrap:wrap
+}
+
+.footer{
+  text-align:center;
+  color:#5d6b78;
+  font-size:13px;
+  margin-top:18px
+}
+
+@media(max-width:600px){
+  header,main{
+    padding:24px 20px
+  }
+
+  .checks{
+    grid-template-columns:1fr
+  }
+
+  h1{
+    font-size:26px
+  }
+
+  .actions{
+    justify-content:stretch
+  }
+
+  .actions button{
+    width:100%
+  }
+}
+
+@media print{
+  body{
+    background:#fff
+  }
+
+  .card{
+    box-shadow:none
+  }
+
+  button,
+  .footer{
+    display:none
+  }
+}
 </style>
+
 </head>
+
 <body>
+
 <div class="container">
-<div class="card">
+  <div class="card">
+
+```
 <header>
-<h1>Pre-Meeting Questions</h1>
-<p>Tech Help Appointment</p>
+  <h1>Pre-Meeting Questions</h1>
+  <p>Tech Help Appointment</p>
 </header>
-<main>
 
-<section class="question">
-<span class="title">1. What would you like help with? <span style="font-weight:400">(Please pick all that apply.)</span></span>
-<div class="checks">
-<label class="check"><input type="checkbox"> iPhone / iPad</label>
-<label class="check"><input type="checkbox"> Android phone / tablet</label>
-<label class="check"><input type="checkbox"> Computer / laptop</label>
-<label class="check"><input type="checkbox"> TV / streaming</label>
-<label class="check"><input type="checkbox"> Email</label>
-<label class="check"><input type="checkbox"> Photos</label>
-<label class="check"><input type="checkbox"> Internet / Wi-Fi</label>
-<label class="check"><input type="checkbox"> Other</label>
-</div>
-<input type="text" placeholder="If Other, please describe">
-</section>
+<!--
+  FORM SUBMIT
+  Replace YOUR_EMAIL@example.com with the email address
+  where you want to receive completed forms.
+-->
+<form
+  action="https://formsubmit.co/jrc645@verizon.net"
+  method="POST"
+>
 
-<section class="question">
-<label class="title">2. What are you trying to do, or what isn't working?</label>
-<textarea></textarea>
-</section>
+  <!-- FormSubmit settings -->
+  <input type="hidden" name="_subject" value="New Tech Help Pre-Meeting Questionnaire">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="true">
 
-<section class="question">
-<span class="title">3. If something is not working, is it new or has it been there for some time?</span>
-<div class="checks">
-<label class="check"><input type="checkbox"> New</label>
-<label class="check"><input type="checkbox"> Been there for some time</label>
-</div>
-<p class="hint">Is there any type of message that appears?</p>
-<textarea placeholder="If you see an error or other message, please describe it here."></textarea>
-</section>
+  <main>
 
-<section class="question">
-<span class="title">4. Is the device connected to the internet or cellular service, or both?</span>
-<div class="checks">
-<label class="check"><input type="checkbox"> Internet</label>
-<label class="check"><input type="checkbox"> Cellular</label>
-<label class="check"><input type="checkbox"> Both</label>
-</div>
-</section>
+    <section class="question">
+      <span class="title">
+        1. What would you like help with?
+        <span style="font-weight:400">
+          (Please pick all that apply.)
+        </span>
+      </span>
 
-<section class="question">
-<div class="notice">
-<strong>5. Please have your passwords to your device(s) available.</strong><br>
-This may include your Apple ID, Google account, or Microsoft account.
-<strong>I do not want to know your password</strong>, but you may need to log in during our meeting.
-</div>
-</section>
+      <div class="checks">
 
-<section class="question">
-<div class="notice">
-<strong>Note:</strong> If you're not sure of the answers to these questions, no worries.
-We can review that when we meet. But it could be helpful to have as much information upfront as possible.
-</div>
-</section>
+        <label class="check">
+          <input type="checkbox" name="Help Needed" value="iPhone / iPad">
+          iPhone / iPad
+        </label>
 
-<div class="actions">
-<button type="button" onclick="window.print()">Print / Save as PDF</button>
+        <label class="check">
+          <input type="checkbox" name="Help Needed" value="Android phone / tablet">
+          Android phone / tablet
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="Help Needed" value="Computer / laptop">
+          Computer / laptop
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="Help Needed" value="TV / streaming">
+          TV / streaming
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="Help Needed" value="Email">
+          Email
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="Help Needed" value="Photos">
+          Photos
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="Help Needed" value="Internet / Wi-Fi">
+          Internet / Wi-Fi
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="Help Needed" value="Other">
+          Other
+        </label>
+
+      </div>
+
+      <input
+        type="text"
+        name="Other Help Needed"
+        placeholder="If Other, please describe"
+      >
+    </section>
+
+
+    <section class="question">
+      <label class="title">
+        2. What are you trying to do, or what isn't working?
+      </label>
+
+      <textarea
+        name="What They Are Trying To Do"
+        placeholder="Please describe the problem or what you are trying to accomplish."
+      ></textarea>
+    </section>
+
+
+    <section class="question">
+
+      <span class="title">
+        3. If something is not working, is it new or has it been there for some time?
+      </span>
+
+      <div class="checks">
+
+        <label class="check">
+          <input type="checkbox" name="Problem Duration" value="New">
+          New
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="Problem Duration" value="Been there for some time">
+          Been there for some time
+        </label>
+
+      </div>
+
+      <p class="hint">
+        Is there any type of message that appears?
+      </p>
+
+      <textarea
+        name="Error Or Other Message"
+        placeholder="If you see an error or other message, please describe it here."
+      ></textarea>
+
+    </section>
+
+
+    <section class="question">
+
+      <span class="title">
+        4. Is the device connected to the internet or cellular service, or both?
+      </span>
+
+      <div class="checks">
+
+        <label class="check">
+          <input type="checkbox" name="Connection" value="Internet">
+          Internet
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="Connection" value="Cellular">
+          Cellular
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="Connection" value="Both">
+          Both
+        </label>
+
+      </div>
+
+    </section>
+
+
+    <section class="question">
+
+      <div class="notice">
+        <strong>
+          5. Please have your passwords to your device(s) available.
+        </strong>
+        <br>
+        This may include your Apple ID, Google account, or Microsoft account.
+        <strong>I do not want to know your password</strong>,
+        but you may need to log in during our meeting.
+      </div>
+
+    </section>
+
+
+    <section class="question">
+
+      <div class="notice">
+        <strong>Note:</strong>
+        If you're not sure of the answers to these questions, no worries.
+        We can review that when we meet. But it could be helpful to have
+        as much information upfront as possible.
+      </div>
+
+    </section>
+
+
+    <div class="actions">
+
+      <button type="button" onclick="window.print()">
+        Print / Save as PDF
+      </button>
+
+      <button type="submit">
+        Submit Form
+      </button>
+
+    </div>
+
+  </main>
+
+</form>
+```
+
+  </div>
+
+  <div class="footer">
+    Please do not enter passwords or other sensitive information on this page.
+  </div>
+
 </div>
-</main>
-</div>
-<div class="footer">Please do not enter passwords or other sensitive information on this page.</div>
-</div>
+
 </body>
 </html>
